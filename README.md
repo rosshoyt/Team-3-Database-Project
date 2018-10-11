@@ -13,9 +13,9 @@ functionality we want our application to provide to user.
 ##### User Interface/User Experience Ideas 
 1. How flexible should the app be in allowing the user to configure their sport(s) league?
 -Allow user to specify different choices of sport when setting up their league? (say Soccer and/or Basketball)?
-  /*Initially, may be best to pick a specific sport (Basketball would be my vote) instead of leaving that 'up to user'. However,
+  *May be best initially to pick a specific sport (Basketball would be my vote) instead of leaving that 'up to user'. However,
   I think it's interesting to consider a global format that could take in any type of sport's associated requirements when setting up the 
-  custom league...*/
+  custom league...*
 2.  When creating league allow user to specify a custom sport with custom league parameters? Or pick one sport and have a more 
 high-quality product built around the mechanics needed for a league of that type?
 
@@ -27,7 +27,8 @@ high-quality product built around the mechanics needed for a league of that type
 Number of games per season
 Number of players per team
 
-[fill in ]
+[fill in more examples]
+
 What different ways and formats do we want to display the database system information to give different types of insights?
 
 ####
