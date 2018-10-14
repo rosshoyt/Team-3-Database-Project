@@ -32,12 +32,12 @@ decide to model a league that supports multiple sport types.
 
 Alternatively, if we decide to model a league that can only support one type 
 of sport, we can put more effort into modeling some scoring nuances for that
-sport. 
+sport, as well as player stats potentially.
 
 ## Table Groups ##
 
 The model is fairly complex, so I will try to explain how it works by 
-describing various groups of related tables. 
+describing various groups of tables that are closely related. 
 
 #### TEAM, PLAYER, TEAM_PLAYER, LEAGUE, TEAM_LEAGUE, SPORT ####
 
@@ -101,7 +101,8 @@ One of the tricky things about modeling a double-elimination playoff is that
 there are essentially two different brackets (the winner's and loser's bracket, 
 respectively) that link up at the final match. Since these brackets are modeled
 in two different tables, a third table called DOUBLE_ELIMINATION_FINAL was 
-added. This table will reference the respective child games of the winner's 
-and loser's brackets. TEAM_DOUBLE_ELIMINATION_FINAL does the same thing as
-TEAM_DOUBLE_ELIMINATION_WINNER_BRACKET and TEAM_DOULBE_ELIMINATION_LOSER_BRACKET. 
+added. This table describes the final game of a double elimination bracket and 
+references the respective child games of the winner's and loser's brackets. 
+TEAM_DOUBLE_ELIMINATION_FINAL does the same thing as TEAM_DOUBLE_ELIMINATION_WINNER_BRACKET 
+and TEAM_DOULBE_ELIMINATION_LOSER_BRACKET. 
 
