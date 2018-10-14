@@ -39,7 +39,7 @@ sport.
 The model is fairly complex, so I will try to explain how it works by 
 describing various groups of related tables. 
 
-### TEAM, PLAYER, TEAM_PLAYER, LEAGUE, TEAM_LEAGUE, SPORT ###
+#### TEAM, PLAYER, TEAM_PLAYER, LEAGUE, TEAM_LEAGUE, SPORT ####
 
 This group is pretty self-explanatory. A team is defined by the sport it plays, 
 the players, and the league it is in. A player can play in multiple teams 
@@ -50,7 +50,7 @@ defined by the sport type, the gender make-up (men's, women's, co-ed, open,
 etc.), and the playoff type (single-elimination, double-elimination, or no 
 playoffs). 
 
-### LOCATION, SPORT, LOCATION_SPORT ###
+#### LOCATION, SPORT, LOCATION_SPORT ####
 
 Locations are defined by an address and the types of sports they can support. 
 (perhaps location should be called 'facility'). Since a facility can potentially
@@ -59,7 +59,7 @@ facilities, this is a many-to-many relationship. Additionally, the capacity of
 the facility for that sport type (number of courts, playing fields, baseball 
 diamonds, pools, etc) is embedded in the LOCATION_SPORT table. 
 
-### MATCH_REGULAR_SEASON ###
+#### MATCH_REGULAR_SEASON ####
 
 One of the main utilities of the app will be scheduling game play. The schedule 
 for regular season games is embedded in MATCH_REGULAR_SEASON (ignore the 
@@ -68,7 +68,7 @@ and team lineups. One of the featuers of our app could be making sure that
 scheduling conflicts between different matches don't occur, and optimizing
 the scheduling to fit as many matches into as short a time as possible. 
 
-### SINGLE_ELIMINATION_PLAYOFF, TEAM_SINGLE_ELIMINATION_PLAYOFF ###
+#### SINGLE_ELIMINATION_PLAYOFF, TEAM_SINGLE_ELIMINATION_PLAYOFF ####
 
 If a league opts to go with a single-elimination playoff, these tables
 exist to schedule those playoffs. SINGLE_ELIMINATION_PLAYOFF is a self-
@@ -82,9 +82,7 @@ SINGLE_ELIMINATION_PLAYOFF table is because it isn't known until the playoff
 game actually starts so rows would be filled with a bunch of NULL values, at 
 least initially until the teams/scores are known. 
 
-### DOUBLE_ELIMINATION_WINNER_BRACKET, TEAM_DOUBLE_ELIMINATION_WINNER_BRACKET,
-### DOUBLE_ELIMINATION_LOSER_BRACKET, TEAM_DOUBLE_ELIMINATION_LOSER_BRACKET, 
-### DOUBLE_ELIMINATION_FINAL, TEAM_DOUBLE_ELIMINATION_FINAL
+#### DOUBLE_ELIMINATION_WINNER_BRACKET, TEAM_DOUBLE_ELIMINATION_WINNER_BRACKET, DOUBLE_ELIMINATION_LOSER_BRACKET, TEAM_DOUBLE_ELIMINATION_LOSER_BRACKET, DOUBLE_ELIMINATION_FINAL, TEAM_DOUBLE_ELIMINATION_FINAL ####
 
 Much like the single elimination playoff scheme, except double elimination 
 (go figure). 
