@@ -1,4 +1,4 @@
-## Overview of Stats to Consider Collecting for Sports League Database
+## Stats to Consider Collecting for Sports League Database
 ## Basketball Sport
 
 ### Player - Single Game Stats:
