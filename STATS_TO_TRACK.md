@@ -2,7 +2,7 @@
 ## Sport - Basketball
 
 ### Player - Single Game Stats:
-PLA (PLAYED IN GAME (Y/N))
+PLA (PLAYED IN GAME (Y/N))  
 MINUTES (X/48)  
 PTS  
 FGM [FIELD GOALS MADE]  
