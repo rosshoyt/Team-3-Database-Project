@@ -1,4 +1,4 @@
-package hibernate_db;
+package jdbc;
 
 /**
  * Queries used in Basketball datbase project. As of Nov 23, these queries are 
@@ -27,7 +27,7 @@ public class ProjectQueries {
 	/**
 	 * -- 2) - Shows roster for specific team (team 1 in this case)
 	 */
-	public final static String Query2 = "SELECT " +
+	public final static String QUERY2 = "SELECT " +
 			"sportsleagueproject.PLAYER.idPLAYER, sportsleagueproject.PLAYER.firstName, sportsleagueproject.PLAYER.lastName,"+
 			"sportsleagueproject.TEAM.idTEAM, sportsleagueproject.TEAM.teamName "+
 			"FROM ((sportsleagueproject.PLAYER_TEAM "+ 
@@ -38,7 +38,7 @@ public class ProjectQueries {
 	/**
 	 * -- 3) Team schedule for given team (team 1 in this example). Displays all future scheduled games for team 1.
 	 */
-	public final static String Query3 =	 " SELECT​"
+	public final static String QUERY3 =	 " SELECT​"
 			+ " T1.seasonName, T1.matchdateTimeStart, T1.facilityName, T1.matchNumber, T2.OpposingTeam ​FROM"
 			+"(​SELECT​ basketballleagueproject.SEASON.seasonName, basketballleagueproject.GAME.matchdateTimeStart, basketballleagueproject.FACILITY.facilityName, basketballleagueproject.GAME_TEAM.match ​AS​ matchNumber"
 			+"FROM​ ((((basketballleagueproject.GAME_TEAM INNER​ ​JOIN​ basketballleagueproject.TEAM ​ON basketballleagueproject.GAME_TEAM.team = basketballleagueproject.TEAM.idTEAM)"
@@ -55,7 +55,7 @@ public class ProjectQueries {
 	/**
 	 * -- 4) Player's schedule for all upcoming games (playerid 16 in this example).  
 	 */
-	public final static String Query4 = "SELECT​" 
+	public final static String QUERY4 = "SELECT​" 
 			+" T2.seasonName, T2.matchDateTimeStart ​as​ MatchStartTime, T2.facilityName ​AS​ Facility,"
 			+" T1.teamName ​as​ PlayingAs ​FROM"
 			+" (​SELECT​ basketballleagueproject.SEASON.seasonName, basketballleagueproject.TEAM.idTEAM, basketballleagueproject.GAME.matchdateTimeStart, basketballleagueproject.FACILITY.facilityName,"
@@ -72,7 +72,7 @@ public class ProjectQueries {
 	/**
 	 * -- 5) Show schedule of all games (date/time and location) for a given season (season id 1 in this example). 
 	 */
-	public final static String Query5 = "SELECT"
+	public final static String QUERY5 = "SELECT"
 			+" basketballleagueproject.GAME.idGAME, basketballleagueproject.SEASON.seasonName, basketballleagueproject.FACILITY.facilityName, basketballleagueproject.GAME.matchDateTimeStart ​AS​ DateTimeStart FROM​ basketballleagueproject.GAME"
 			+" INNER​ ​JOIN​ basketballleagueproject.SEASON"
 			+" ON​ basketballleagueproject.GAME.season = basketballleagueproject.SEASON.idSEASON"
@@ -81,24 +81,24 @@ public class ProjectQueries {
 	/**
 	 * -- 6) Retrieves list of all female players.
 	 */
-	public final static String Query6 = "SELECT​"
+	public final static String QUERY6 = "SELECT​"
 			+ " * ​FROM​ basketballleagueproject.PLAYER WHERE​ basketballleagueproject.PLAYER.sex = ​'F'​;";
 
 	/**
 	 * -- 7) Retrieves all male players in league. 
 	 */
-	public final static String Query7 = "SELECT​"
+	public final static String QUERY7 = "SELECT​"
 			+" * ​FROM​ basketballleagueproject.PLAYER WHERE​ basketballleagueproject.PLAYER.sex = ​'M'​;";
 	/**
 	 * -- 8) Player stats for individual game (assumption is that particular game is known)
 	 */
-	public final static String Query8 = "SELECT​"
+	public final static String QUERY8 = "SELECT​"
 			+" * ​FROM​ basketballleagueproject.PLAYER_PERFORMANCE ​WHERE basketballleagueproject.PLAYER_PERFORMANCE.player = 16"
 			+" && basketballleagueproject.PLAYER_PERFORMANCE.team_match = 13;";
 	/**
 	 * -- 9) Player stats for all time. 
 	 */
-	public final static String Query9 = "SELECT​ "
+	public final static String QUERY9 = "SELECT​ "
 			+" ​SUM​(basketballleagueproject.PLAYER_PERFORMANCE.FGM) ​AS​ ​'FGM: All-Time'​,"
 			+" SUM​(basketballleagueproject.PLAYER_PERFORMANCE.FGA) ​AS​ ​'FGA: All-Time'​, (​SUM​(basketballleagueproject.PLAYER_PERFORMANCE.FGM) / SUM​(basketballleagueproject.PLAYER_PERFORMANCE.FGA) * 100.0) ​AS​ ​'Field Goal %: All-Time'​,"
 			+" -- SUM(sportsleagueproject.PLAYER_PERFORMANCE.3PM) AS '3PM: All-Time',"
@@ -114,7 +114,7 @@ public class ProjectQueries {
 	/**
 	 * -- 10) Retrieves each score that every team got in every game played. 
 	 */
-	public final static String Query10 = "SELECT​"
+	public final static String QUERY10 = "SELECT​"
 			+" basketballleagueproject.GAME_TEAM.score, basketballleagueproject.GAME_TEAM.match, basketballleagueproject.TEAM.teamName"
 			+" FROM​ basketballleagueproject.GAME_TEAM"
 			+" INNER​ ​JOIN​ basketballleagueproject.TEAM ​ON basketballleagueproject.GAME_TEAM.team = basketballleagueproject.TEAM.idTEAM"
@@ -122,7 +122,7 @@ public class ProjectQueries {
 	/**
 	 * -- 11) All names and email addresses of players for league-wide communications. 
 	 */
-	public final static String Query11 = "SELECT"
+	public final static String QUERY11 = "SELECT"
 			+" basketballleagueproject.PLAYER.firstName, basketballleagueproject.PLAYER.lastName, basketballleagueproject.PLAYER.email ​FROM basketballleagueproject.PLAYER;";
 
 
