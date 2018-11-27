@@ -13,6 +13,8 @@ import java.sql.SQLException;
 import java.util.Scanner;
 import javax.swing.table.DefaultTableModel;
 
+import dao.DAOManager;
+
 import java.util.ArrayList;
 import java.util.Properties;
 
@@ -94,6 +96,8 @@ public class BasketballLeagueGUI extends javax.swing.JFrame {
 	static final String DB_USER = jdbc.AppDB_Connection_info.LOCAL_TEST_USERNAME;
 	
 	static final String DB_PASSWD = jdbc.AppDB_Connection_info.LOCAL_TEST_PW;
+	
+	static DAOManager daoManager;
 	
 	String m_error= "";
 
