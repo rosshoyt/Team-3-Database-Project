@@ -1,0 +1,26 @@
+idPLAYER,firstName,lastName,middleInitial,dateOfBirth,sex,email,areaCode,phoneNumber
+1," Javier"," Rodriguez",,1985-06-22,M," javrod@gmail.com",,NULL
+2," David"," George"," H",1990-03-12,M," davidg@hotmail.com"," ",NULL
+3," Eric"," Dubbury"," B",1992-12-21,M," edubbury@gmail.com",,NULL
+4," Abraham"," Lincoln",,1970-04-12,M," abelinc@yahoo.com",,NULL
+5," Teddy"," Roosevelt",,1990-01-23,M," teddyR@gmail.com",,NULL
+6," Claude"," Gordon",,1972-10-13,M," clodgordon@gmail.com",,NULL
+7," Davis"," Adams",,1992-10-10,M," davisadams12@gmail.com",,NULL
+8," Fred"," Kuczmarski",,1958-07-14,M," fredkyahoo.com"," ",NULL
+9," William"," Sherman"," T",1988-01-15,M," willyTShe@gmail.com"," ",NULL
+10," Ulysses"," Grant"," S",1977-05-27,M," USGroxx@gmail.com"," ",NULL
+11," Bill"," Clinton",,1968-09-05,M," billyC@yahoo.com",,NULL
+12," Seth",Macfarlane,,1978-12-29,M," sethmac@gmail.com",,NULL
+13," Donald"," Knuth",,1966-03-18,M," donk@yahoo.com",,NULL
+14," Alan"," Turing",,1975-08-08,M," turingmachine1@gmail.com",,NULL
+15," Bill"," Gates",,1955-11-13,M," windowsguy@gmail.com",,NULL
+16," Steve"," Jobs",,1957-04-22,M," appleguy@gmail.com"," ",NULL
+17," Ryan"," Gosling",,1982-03-30,M," imRyanGosling@gmail.com",,NULL
+18," Tom"," Hanks",,1959-10-08,M," otmshank@yahoo.com",,NULL
+19," Ryan"," Secrest"," ",1987-06-19,M," ",,NULL
+20," Thomas"," Morse",,1981-08-04,M," beepboop@yahoo.com",,NULL
+21," Niel"," Armstrong",,1969-07-09,M," lunarmodule@nasa.com"," ",NULL
+22," George"," Patton",,1973-09-28,M," thegeneral@gmail.com",,NULL
+23," Michael"," Jordan",,1980-01-01,M," mj@yahoo.com"," ",NULL
+24," Lebron"," James",,1985-02-28,M," lebronjameyjames@gmail.com"," ",NULL
+25," Eric"," Cartman",,1998-05-12,M," ericc@gmail.com"," ",NULL

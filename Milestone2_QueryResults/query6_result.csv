@@ -1,0 +1,16 @@
+idPLAYER,firstName,lastName,middleInitial,dateOfBirth,sex,email,areaCode,phoneNumber
+26," Melissa"," Nealy",,1994-03-28,F," mellisaN@yahoo.com"," ",NULL
+27," Linda"," Anderson",,1969-05-10,F," lindahanderson@gmail.com"," ",NULL
+28," Amelia"," Earheart",,1982-04-09,F," flygirlfly@gmail.com"," ",NULL
+29," Grace"," Hopper",,1970-10-02,F," computernerd@gmail.com"," ",NULL
+30," Emily"," Haines",,1992-07-22,F," emilyhaines@gmail.com"," ",NULL
+31," Veronica"," Muller",,1965-10-10,F," veronicam@yahoo.com",,NULL
+32," Kerry"," Parker",,1978-12-20,F," kerryparker@yahoo.com",,NULL
+33," Sarah"," Ocher",,1981-09-22,F," saraOcher@gmail.com",,NULL
+34," Melinda"," Gates",,1980-05-19,F," melindaG@gmail.com"," ",NULL
+35," Eleanor"," Roosevelt",,1975-02-15,F," eroosevelt@gmail.com",,NULL
+36," Margaret"," Thatcher",,1980-06-06,F," ironlade@yahoo.com",,NULL
+37," Natalie"," Portman",,1975-08-08,F," natalietheactress@gmail.com",,NULL
+38," Kelly"," Stevens",,1962-03-06,F," kellys@yahoo.com"," ",NULL
+39," Rebecca"," Herivel",,1985-12-13,F," rebeccah@gmail.com",,NULL
+40," Christine"," James",,1981-07-01,F," ChristineJ@yahoo.com"," ",NULL
