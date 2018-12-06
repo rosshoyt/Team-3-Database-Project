@@ -48,28 +48,8 @@ public class CreatePlayerDataMapper {
 			return resultSet.getInt(1);
 		} 
 			
-		return -1; // should never get here; this means that insert wasn't successful, and no sql errors (wtf?) 
+		return -1; // should not get here; this means that insert wasn't successful, and no sql errors 
 	}
 	
-	/*
-	private boolean firstNameIsValid(String firstName) {
-		return firstName.length() <= 45; 
-	}
-	
-	private boolean lastNameIsValid(String lastName) {
-		return lastName.length() <= 45; 
-	}
-	
-	private boolean dateOfBirthIsValid(java.sql.Date DOB) {
-		return true; // not sure how this can fail at this point
-	}
-	
-	private boolean sexIsValid(String sex) {
-		return sex.equals("M") || sex.equals("F");
-	}
-	
-	private boolean emailIsValid(String email) {
-		return email.length() <= 45; 
-	}
-	*/
+
 }

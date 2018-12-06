@@ -9,21 +9,36 @@ import javax.naming.InitialContext;
 import java.io.Console;
 
 public class Driver {
+	
+	
+	/**
+	 * Main method which accepts command line arguments. 
+	 * This method also contains the primary application loop.
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		String userCommand = ""; 
 		Scanner scanner = new Scanner(System.in);
-		DatabaseConnectionInfo databaseConnectionInfo = initialSetUp(); // use this to establish database connections 
 		
+		//establish database connection
+		DatabaseConnectionInfo databaseConnectionInfo = initialSetUp();  
+		
+		//primary application loop
 		while (!userCommand.equals("q") && !userCommand.equals("quit")) {
+			//display main menu and get user selection
 			showMainMenu();
 			userCommand = scanner.next();
+			System.out.println();
 			DelegateCommand(userCommand, databaseConnectionInfo);
 		}
 	}
 	
-	// Sets up the console session by obtaining 
-	// database connection info 
+	
+	/**
+	 * Sets up the console session by obtaining database connection info 
+	 * @return user's specified database connection info
+	 */
 	public static DatabaseConnectionInfo initialSetUp() {
 		boolean connectionSuccessful = false; 
 		String validUserName = ""; 
@@ -65,11 +80,17 @@ public class Driver {
 				}
 			}
 		}
+		
 		return new DatabaseConnectionInfo(validUserName, validPassword);
 	}
 	
-	// Simply displays main menu of app 
+	/**
+	 * Displays main menu of app and gets user's input
+	 * @return String userCommand
+	 */
 	public static void showMainMenu() {
+		
+		
 		System.out.println("MAIN MENU: Please select one of the options below to continue:");
 		System.out.println();
 		System.out.println("1) Create New Player"); 
@@ -78,9 +99,18 @@ public class Driver {
 		System.out.println("4) View Team Roster"); 
 		System.out.println();
 		System.out.print("Type '1', '2', '3', or '4' to continue. Type 'q' or 'quit' to quit: ");
+		
+		
+		
+		
 	}
 	
-	// parses out command from user and then delegates action
+	
+	/**
+	 * Method which runs the menu function specified by user
+	 * @param s User's menu selection
+	 * @param connectionInfo 
+	 */
 	public static void DelegateCommand(String s, DatabaseConnectionInfo connectionInfo) {
 		if (s.equals("1")) {
 			createNewPlayer(connectionInfo);
@@ -102,6 +132,10 @@ public class Driver {
 	}
 	
 	
+	/**
+	 * Creates new player in the database from user specified player details
+	 * @param connectionInfo
+	 */
 	public static void createNewPlayer(DatabaseConnectionInfo connectionInfo) {
 		
 		Scanner scanner = new Scanner(System.in);
@@ -147,6 +181,10 @@ public class Driver {
 		}
 	}
 	
+	/**
+	 * Displays player info based on provided player id
+	 * @param connectionInfo
+	 */
 	public static void viewPlayerInfo(DatabaseConnectionInfo connectionInfo) {
 		Scanner scanner = new Scanner(System.in);
 		String id = "";
@@ -175,6 +213,10 @@ public class Driver {
 		}
 	}
 
+	/**
+	 * Shows outcome of user-specified game, selected by id
+	 * @param connectionInfo
+	 */
 	public static void viewGameOutcome(DatabaseConnectionInfo connectionInfo) {
 		Scanner scanner = new Scanner(System.in);
 		String id = ""; // initialize variable
@@ -204,6 +246,10 @@ public class Driver {
 		}
 	}
 	
+	/**
+	 * Displays team roster of user's specified team
+	 * @param connectionInfo
+	 */
 	public static void viewTeamRoster(DatabaseConnectionInfo connectionInfo) {
 		Scanner scanner = new Scanner(System.in);
 		String input = "";
